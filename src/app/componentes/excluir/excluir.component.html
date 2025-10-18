@@ -1,0 +1,15 @@
+<mat-card>
+<div *ngIf="produto">
+    <h1 style="text-align: center;">Deseja confirmar a exclusão?</h1>
+    <div>
+        <h2 style="font-style: bold;">Produto</h2>
+        <p>{{produto.nome}}</p>
+        <p>{{produto.preco}}</p>
+        <p>{{produto.estoque}}</p>
+        <div>
+            <button mat-raised-button color="warn" (click)="Excluir()">Confirmar Exclusão</button>
+            <button mat-raised-button (click)="Cancelar()">Voltar</button>
+        </div>
+    </div>
+</div>
+</mat-card>
