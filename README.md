@@ -46,17 +46,42 @@ Confirmação de exclusão <img width="1100" height="551" alt="exclusão produto
 
 ---
 
-## 🚀 Como executar
+##  Para testar o CRUD do Angular
 
-1. Clone o repositório:
+## 🚀 Passo a passo para rodar a API (.NET) juntamente com o Angular 
+
+Este projeto utiliza banco de dados **em memória**, ideal para testes rápidos sem necessidade de configurar SQL Server.
+
+
    ```bash
+🔹 1. Clonar o Repositório
+   git clone https://github.com/Viniradis/projeto-crud-api.git
+   cd projeto-crud-api
+
+🔹 2. Rodar a API
+bash
+dotnet run
+
+🔹 3. A API será iniciada e estará disponivel em:
+https://localhost:7221
+
+🔹 4. Você pode acessar a documentação Swagger em:
+https://localhost:7221/swagger
+
+
+🔹 5. Clonar o Repositório Angular
    git clone https://github.com/Viniradis/angular-crud.git
-   
-Instale as dependências:
-npm install
+   cd angular-crud
 
-Execute o projeto:
-ng serve
+🔹 6. Instalar as dependências
+   npm install
 
-Acesse no navegador
-http://localhost:4200
+🔹 7. Rodar o projeto Angular
+   ng serve
+
+🔹 8. A aplicação estará disponível em:
+   http://localhost:4200
+
+
+
+
