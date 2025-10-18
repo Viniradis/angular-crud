@@ -46,42 +46,67 @@ Confirmação de exclusão <img width="1100" height="551" alt="exclusão produto
 
 ---
 
-##  Para testar o CRUD do Angular
+## 🧪 Como testar o projeto CRUD (Angular + .NET 6.0)
 
-## 🚀 Passo a passo para rodar a API (.NET) juntamente com o Angular 
+Este projeto é composto por:
 
-Este projeto utiliza banco de dados **em memória**, ideal para testes rápidos sem necessidade de configurar SQL Server.
+- **Frontend:** Angular 16  
+- **Backend:** ASP.NET Core 6.0  
+- **Banco de dados:** InMemory (ideal para testes rápidos, sem necessidade de configurar SQL Server)
 
+---
 
+### ✅ Pré-requisitos
+
+Antes de iniciar, certifique-se de ter os seguintes itens instalados:
+
+| Tecnologia   | Versão mínima | Link para download                     |
+|--------------|----------------|----------------------------------------|
+| Node.js      | 18.x           | [nodejs.org](https://nodejs.org/)      |
+| Angular CLI  | 16.x           | `npm install -g @angular/cli`          |
+| .NET SDK     | 6.0            | [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) |
+| Git          | Qualquer       | [git-scm.com](https://git-scm.com/)    |
+
+---
+
+### 🚀 Passo a passo para rodar o projeto
+
+#### 🔧 Backend (.NET 6.0)
+
+1. **Clonar o repositório da API**
    ```bash
-🔹 1. Clonar o Repositório
    git clone https://github.com/Viniradis/projeto-crud-api.git
    cd projeto-crud-api
+Executar a API: dotnet run
 
-🔹 2. Rodar a API
-bash
-dotnet run
+A API estará disponível em:
+http://localhost:7221
 
-🔹 3. A API será iniciada e estará disponivel em:
-https://localhost:7221
+Documentação da API via Swagger:
+http://localhost:7221/swagger
 
-🔹 4. Você pode acessar a documentação Swagger em:
-https://localhost:7221/swagger
+⚠️ Nota: O protocolo foi alterado de HTTPS para HTTP para facilitar testes locais sem necessidade de certificado SSL.
 
+💻 Frontend (Angular 16)
+Clonar o repositório do Angular
+```bash
+git clone https://github.com/Viniradis/angular-crud.git
+cd angular-crud
 
-🔹 5. Clonar o Repositório Angular
-   git clone https://github.com/Viniradis/angular-crud.git
-   cd angular-crud
+Instalar as dependências
+npm install
 
-🔹 6. Instalar as dependências
-   npm install
+Executar o projeto Angular
+ng serve
 
-🔹 7. Rodar o projeto Angular
-   ng serve
+A aplicação estará disponível em:
+http://localhost:4200
 
-🔹 8. A aplicação estará disponível em:
-   http://localhost:4200
+🧪 Testando a aplicação
+Ao acessar http://localhost:4200, você verá a interface do CRUD.
 
+Certifique-se de que a API está rodando em paralelo (http://localhost:7221) para que o frontend consiga consumir os dados corretamente.
 
+Todas as operações (Create, Read, Update, Delete) são persistidas em memória e reiniciadas ao parar a API.
 
 
